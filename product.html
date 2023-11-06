@@ -1,0 +1,28 @@
+
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p>This is product page</p>
+        <?php
+            session_start();
+            if (!empty ($_SESSION['message'])){
+                $message = $_SESSION['message'];
+                echo "wellcome back $message";
+            }else{
+                echo "theres no message pass on <br>";
+            }
+
+        ?>
+
+        <p>
+
+        <ul>
+            <li>Product 1</li>
+        </ul>
+
+    
+    </body>
+</html>
