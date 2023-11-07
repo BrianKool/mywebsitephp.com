@@ -1,7 +1,10 @@
 <?php 
+
+    
+    include 'credential.php';
     $servername = "localhost";
-    $username = "brian";
-    $password = "4587476";
+    $username = $GLOBALS["username"];
+    $password = $GLOBALS["password"];
     $databsae = "brian";
 
     //create connection 

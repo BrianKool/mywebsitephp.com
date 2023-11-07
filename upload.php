@@ -51,10 +51,11 @@ if ($uploadOk == 0) {
 
 //********************************************************/
 //upload data to sql database
+include 'credential.php';
 $servername = "localhost";
-    $username = "brian";
-    $password = "4587476";
-    $databsae = "brian";
+$username = $GLOBALS["username"];
+$password = $GLOBALS["password"];
+$databsae = "brian";
 
     //create connection 
     $conn = new mysqli($servername, $username, $password, $databsae);
