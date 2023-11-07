@@ -2,7 +2,7 @@
 
 <html>
     <head>
-
+    <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <p>This is product page</p>
@@ -12,12 +12,21 @@
                 $message = $_SESSION['message'];
                 echo "wellcome back $message";
             }else{
-                echo "theres no message pass on <br>";
+                echo "please login first<br>";
             }
 
         ?>
 
         <p>
+
+        <div class="dropdown">
+            <button>Setting</button>
+            <div class="dropdown-options">
+                <a href="./seller.html">I am a seller</a>
+                <a href="./setting.html">Profile</a>
+                <a href="./index.html">Logout</a>
+            </div>
+        </div>
 
         <ul>
             <li>Product 1</li>
