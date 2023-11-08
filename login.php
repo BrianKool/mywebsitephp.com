@@ -16,9 +16,14 @@
     }
     echo "Connected Successfully and the login result is below" . "<br>";
 
-    $email = $_GET["email"];
-    $ps = $_GET["ps"];
+    //check the http request method
+    if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 
+    //can also use $_POST for html form post method
+    $email = $_REQUEST["email"];
+    $ps = $_REQUEST["ps"];
+
+    }
     $sql = "SELECT * FROM myuser WHERE email = '$email'";
     $result = $conn->query($sql);
 
