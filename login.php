@@ -1,5 +1,22 @@
 <?php 
 
+    //check the http request method
+    if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+
+        //can also use $_POST for html form post method
+        $email = $_REQUEST["email"];
+        $ps = $_REQUEST["ps"];
+
+            // Validate e-mail
+        if (!filter_var($_REQUEST["email"], FILTER_VALIDATE_EMAIL) === false) {
+            echo("$email is a valid email address");
+        } else {
+            echo "<script>setTimeout(\"location.href = './index.html';\",1500);</script>";
+            die ("The email or password is wrong!");
+        }
+
+    }
+
     
     include 'credential.php';
     $servername = "localhost";
@@ -16,14 +33,7 @@
     }
     echo "Connected Successfully and the login result is below" . "<br>";
 
-    //check the http request method
-    if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 
-    //can also use $_POST for html form post method
-    $email = $_REQUEST["email"];
-    $ps = $_REQUEST["ps"];
-
-    }
     $sql = "SELECT * FROM myuser WHERE email = '$email'";
     $result = $conn->query($sql);
 
@@ -45,8 +55,8 @@
                 $_SESSION['message'] = $obj->firstname;
                 header('Location: product.html');
             }else{
-                echo "Please Log In First";
-                echo "<script>setTimeout(\"location.href = './signup.html';\",1500);</script>";
+                echo "The email or password is wrong!";
+                echo "<script>setTimeout(\"location.href = './index.html';\",1500);</script>";
             }
         }
     }
