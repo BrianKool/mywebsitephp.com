@@ -6,6 +6,7 @@
     </head>
     <body>
         <p>This is product page</p>
+
         <?php
             session_start();
             if (!empty ($_SESSION['message'])){
@@ -28,8 +29,14 @@
             </div>
         </div>
 
+
+        <form action="./find.php" method="post">
+            <input input type="text" name="Pname">
+            <button type="submit">Search</button>
+        </form>
+
         <ul>
-            <?php include 'product.php' ?>    
+            <?php include './product.php' ?>
         </ul>
         
 

@@ -1,5 +1,5 @@
 <?php 
-
+    include 'find.php';
     include 'credential.php';
     $servername = "localhost";
     $username = $GLOBALS["username"];
@@ -14,12 +14,24 @@
         die("connection failed: " . $conn->connect_error);
     }
 
-    $sql = "SELECT * FROM product";
-    $result = $conn->query($sql);
-
     ///object method to fetch object///
     //----- this method return object 
+        
+    $find_value = FALSE;
 
+    if (!empty ($_SESSION['product'])){
+        $Pname = $_SESSION['product'];
+        unset($_SESSION['product']);
+        $find_value = TRUE;
+    }
+
+    if ($find_value){
+       $sql = "SELECT * FROM product WHERE Pname LIKE '%$Pname%';"; 
+    }else{
+        $sql = "SELECT * FROM product;";
+    }
+    
+    $result = $conn->query($sql);
 
     if($result = $conn->query($sql)){
         while($obj = $result->fetch_object()){
@@ -33,8 +45,8 @@
                 </li>";
 
         }
-    }
-    
+    }   
+
     $conn->close();
 
 
