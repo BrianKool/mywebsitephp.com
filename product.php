@@ -38,7 +38,9 @@
             $Pname = $obj->Pname;
             $Pimage = $obj->Pimage;
             $Pdescription = $obj->Pdescription;
+            $Pid = $obj->id;
             echo "<li>
+                    <a href=./item.html/$Pid>
                     <p>$Pname</p>
                     <img src=$Pimage alt='error' width='150' height='120'>
                     <h4>$Pdescription</h4>
