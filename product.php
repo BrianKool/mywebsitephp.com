@@ -44,6 +44,7 @@
                     <p>$Pname</p>
                     <img src=$Pimage alt='error' width='150' height='120'>
                     <h4>$Pdescription</h4>
+                    </a>
                 </li>";
 
         }
@@ -52,6 +53,6 @@
     $conn->close();
 
 
-
+// <img src='/source/unliked.png' width='30' height='30'>
 
 ?>

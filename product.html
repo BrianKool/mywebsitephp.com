@@ -1,15 +1,16 @@
 <html>
     <head>
     <link rel="stylesheet" href="style.css">
+
     </head>
     <body>
         <p>This is product page</p>
 
         <?php
             session_start();
-            if (!empty ($_SESSION['message'])){
-                $message = $_SESSION['message'];
-                echo "wellcome back $message";
+            if (!empty ($_SESSION['user'])){
+                $user = $_SESSION['user'];
+                echo "wellcome back $user";
             }else{
                 echo "please login first<br>";
             }
@@ -23,7 +24,7 @@
             <div class="dropdown-options">
                 <a href="./seller.html">I am a seller</a>
                 <a href="./setting.html">Profile</a>
-                <a href="./index.html">Logout</a>
+                <a href="./sign_out.php">Logout</a>
             </div>
         </div>
 
@@ -34,9 +35,12 @@
         </form>
 
         <ul>
-            <?php include './product.php' ?>
+            <?php 
+                include './product.php';
+
+            ?>
         </ul>
-        
+
 
     
     </body>

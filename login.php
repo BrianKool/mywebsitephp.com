@@ -52,7 +52,7 @@
             $sqlps = $obj->password;
             if ($sqlps == $ps){
                 session_start();
-                $_SESSION['message'] = $obj->firstname;
+                $_SESSION['user'] = $obj->firstname;
                 header('Location: product.html');
             }else{
                 echo "The email or password is wrong!";
@@ -70,6 +70,7 @@
     //             echo "rowpassword: " .  $row["password"];
     //         }
     // }
+  
         
     
     $conn->close();
