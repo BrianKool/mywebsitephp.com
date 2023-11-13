@@ -1,9 +1,14 @@
 <?php 
 
+    session_start();
 
     $link = $_SERVER['PHP_SELF'];
     $link_array = explode('/',$link);
     $itemID = end($link_array);
+
+    $_SESSION['itemID'] = $itemID;
+
+    $userid = $_SESSION['userid'];
 
     include 'credential.php';
     $servername = "localhost";
@@ -18,6 +23,17 @@
     if ($conn->connect_error) {
         die("connection failed: " . $conn->connect_error);
     }
+
+    //get the likeornot state from mysql 
+    $sqllike = "SELECT userid FROM `product_like` WHERE productid = $itemID;";
+    $resultlike = $conn->query($sqllike);
+    //if no data matched then response to frontend unlike image
+    if ($resultlike->num_rows == 0){
+        echo "<br>userid: ". $userid . " has not liked productid: " . $itemID . "<br>";
+    }else{
+        echo "<br>userid: ". $userid . " has liked productid: " . $itemID . "<br>";
+    }
+
 
     $sql = "SELECT * FROM `product` WHERE id = $itemID;";
     $result = $conn->query($sql);

@@ -53,6 +53,7 @@
             if ($sqlps == $ps){
                 session_start();
                 $_SESSION['user'] = $obj->firstname;
+                $_SESSION['userid'] = $obj->userid;
                 header('Location: product.html');
             }else{
                 echo "The email or password is wrong!";
