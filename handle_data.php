@@ -24,24 +24,24 @@ echo "Connected Successfully" . "<br>";
 
 if (isset($_POST['like'])) {
     $data = $_POST['like'];
-    echo $data;
+    echo "post request like data is: " . $data . "<br>";
 
     if ($data == 1){
 
         $sql = "INSERT INTO `product_like`(`userid`, `productid`) VALUES ($userID,$itemID);";
-        echo "handle php: " . $sql . "<br>";
+        echo "handle_data.php: " . $sql . "<br>";
     
     }else{
 
         $sql = "DELETE FROM `product_like` WHERE userid = $userID AND productid = $itemID;";
-        echo "handle php: " . $sql . "<br>";
+        echo "handle _data.php: " . $sql . "<br>";
     }
 }
 
 
 //query the data
 if ($conn->query($sql) === TRUE) {
-    echo "user id: 1 has been add like for product id: 1<br>";
+    echo "query successfully upload to mysql database<br>";
 }else{
     echo "Error: " . $conn->error;
 }

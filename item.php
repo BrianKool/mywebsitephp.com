@@ -27,12 +27,16 @@
     //get the likeornot state from mysql 
     $sqllike = "SELECT userid FROM `product_like` WHERE productid = $itemID;";
     $resultlike = $conn->query($sqllike);
-    //if no data matched then response to frontend unlike image
+    //if no data matched then response to frontend an unlike image
     if ($resultlike->num_rows == 0){
-        echo "<br>userid: ". $userid . " has not liked productid: " . $itemID . "<br>";
+        echo "<br>userid: ". $userid . " has not liked productid: " . $itemID . "   yet.<br>";
+        echo "<button id='likeButton' name='notLiked'>not</button>";
     }else{
-        echo "<br>userid: ". $userid . " has liked productid: " . $itemID . "<br>";
+        echo "<br>userid: ". $userid . " has liked productid: " . $itemID . ".<br>";
+        echo "<button id='likeButton' name='liked'>like</button>";
     }
+
+    echo "<div id='demo'>demo</div>";
 
 
     $sql = "SELECT * FROM `product` WHERE id = $itemID;";
