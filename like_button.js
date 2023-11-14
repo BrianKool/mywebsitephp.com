@@ -12,7 +12,7 @@ document.getElementById('likeButton').addEventListener('click', function() {
 
     // use AJAX to send the state to PHP
     var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "/handle_data.php", true);
+    xhttp.open("POST", "/php/handle_data.php", true);
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhttp.send(document.getElementById('likeButton').innerHTML == "like"  ? "like=1" : "like=0");
 

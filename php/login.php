@@ -11,7 +11,7 @@
         if (!filter_var($_REQUEST["email"], FILTER_VALIDATE_EMAIL) === false) {
             echo("$email is a valid email address");
         } else {
-            echo "<script>setTimeout(\"location.href = './index.html';\",1500);</script>";
+            echo "<script>setTimeout(\"location.href = '/index.html';\",1500);</script>";
             die ("The email or password is wrong!");
         }
 
@@ -54,10 +54,10 @@
                 session_start();
                 $_SESSION['user'] = $obj->firstname;
                 $_SESSION['userid'] = $obj->userid;
-                header('Location: product.html');
+                header('Location: /html/product.html');
             }else{
                 echo "The email or password is wrong!";
-                echo "<script>setTimeout(\"location.href = './index.html';\",1500);</script>";
+                echo "<script>setTimeout(\"location.href = '/html/index.html';\",1500);</script>";
             }
         }
     }

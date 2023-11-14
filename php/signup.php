@@ -32,7 +32,7 @@
         session_start();
         $_SESSION['message'] = $fname;
         echo "Thank you to join use, then now start to explore!";
-        echo "<script>setTimeout(\"location.href = './product.html';\",1500);</script>";
+        echo "<script>setTimeout(\"location.href = '/html/product.html';\",1500);</script>";
     }else{
         echo "Error: " . $conn->error;
     }

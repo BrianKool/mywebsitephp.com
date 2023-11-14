@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         header('Location: product.html');
     }else{
         echo "The item your are searching for is not here!";
-        echo "<script>setTimeout(\"location.href = './product.html';\",1500);</script>";
+        echo "<script>setTimeout(\"location.href = '/html/product.html';\",1500);</script>";
     }
 
 }

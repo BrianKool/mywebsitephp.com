@@ -79,7 +79,7 @@ $databsae = "brian";
     if ($conn->query($sql) === TRUE) {
       session_start();
       echo "Your product has been added successfully";
-      echo "<script>setTimeout(\"location.href = './product.html';\",1500);</script>";
+      echo "<script>setTimeout(\"location.href = '/html/product.html';\",1500);</script>";
     }else{
       echo "Error: " . $conn->error;
     }
