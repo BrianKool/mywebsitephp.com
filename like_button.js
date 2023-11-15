@@ -19,11 +19,11 @@ document.getElementById('likeButton').addEventListener('click', function() {
     
     //########## onreadystatechange is when response received, 
     //########## usually test if the data sccessful send to the server ########
-    xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("demo").innerHTML = this.responseText;
-    }
-    };
+    // xhttp.onreadystatechange = function() {
+    // if (this.readyState == 4 && this.status == 200) {
+    //     document.getElementById("demo").innerHTML = this.responseText;
+    // }
+    // };
 
 
 });
