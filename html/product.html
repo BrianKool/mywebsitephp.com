@@ -5,16 +5,7 @@
     <body>
         <p>This is product page</p>
 
-        <?php
-            session_start();
-            if (!empty ($_SESSION['user'])){
-                $user = $_SESSION['user'];
-                echo "wellcome back $user";
-            }else{
-                echo "please login first<br>";
-            }
-
-        ?>
+        <?php include 'php/profile_card.php'; ?>
 
         <p>
 

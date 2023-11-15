@@ -9,9 +9,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     if ($Pname){
         session_start();
         $_SESSION['product'] = $Pname;
-        header('Location: product.html');
+        header('Location: /html/product.html');
     }else{
-        echo "The item your are searching for is not here!";
+        echo "please insert valid name to search!";
         echo "<script>setTimeout(\"location.href = '/html/product.html';\",1500);</script>";
     }
 

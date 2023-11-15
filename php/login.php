@@ -54,6 +54,7 @@
                 session_start();
                 $_SESSION['user'] = $obj->firstname;
                 $_SESSION['userid'] = $obj->userid;
+                $_SESSION['pp'] = $obj->profile_picture;
                 header('Location: /html/product.html');
             }else{
                 echo "The email or password is wrong!";
