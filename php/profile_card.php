@@ -5,7 +5,7 @@ session_start();
     $user_photo = $_SESSION['pp'];
 
     echo "
-        <p>$user</p>
+        <p>Welcome back $user</p>
         <img src='$user_photo' alt='error' width='100' height='100'>
     ";
 

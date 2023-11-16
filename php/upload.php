@@ -9,8 +9,6 @@ function upload($folder){
   $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
   $filename = pathinfo($target_file, PATHINFO_FILENAME);
 
-  $copy = 1;
-
 
   // Check if image file is a actual image or fake image
   if(isset($_POST["submit"])) {

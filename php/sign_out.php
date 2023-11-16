@@ -1,4 +1,4 @@
 <?php 
     session_destroy();
-    header("Location: /html/index.html", true, 301);
+    header("Location: /index.html", true, 301);
 ?>
