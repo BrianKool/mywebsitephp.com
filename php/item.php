@@ -48,7 +48,7 @@
             $Pimage = $obj->Pimage;
             $Pdescription = $obj->Pdescription;
             echo "<p>$Pname</p>
-                    <img src='/$Pimage' alt='error' width='150' height='120'>
+                    <img src='$Pimage' alt='error' width='150' height='120'>
                     <h4>$Pdescription</h4>";
 
         }

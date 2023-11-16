@@ -6,7 +6,7 @@ session_start();
 
     echo "
         <p>$user</p>
-        <img src='/$user_photo' alt='error' width='100' height='100'>
+        <img src='$user_photo' alt='error' width='100' height='100'>
     ";
 
 

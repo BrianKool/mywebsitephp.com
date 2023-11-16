@@ -42,7 +42,7 @@
             echo "<li>
                     <a href=/html/item.html/$Pid>
                     <p>$Pname</p>
-                    <img src='/$Pimage' alt='error' width='150' height='120'>
+                    <img src='$Pimage' alt='error' width='150' height='120'>
                     <h4>$Pdescription</h4>
                     </a>
                 </li>";
