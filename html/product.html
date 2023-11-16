@@ -5,7 +5,10 @@
     <body>
         <p>This is product page</p>
 
-        <?php include 'php/profile_card.php'; ?>
+        <?php 
+            session_start();
+            include 'php/profile_card.php'; 
+        ?>
 
         <p>
 
@@ -18,18 +21,18 @@
             </div>
         </div>
 
+        <button onclick="window.location.reload(true);">Refresh</button>
     
 
         <form action="/php/find.php" method="post">
             <input input type="text" name="Pname">
             <button type="submit">Search</button>
         </form>
-
-        <button onclick="window.location.reload(true);">Refresh</button>
         
         <ul>
             <?php 
                 include 'php/product.php';
+                show_product(0);
             ?>
         </ul>
 

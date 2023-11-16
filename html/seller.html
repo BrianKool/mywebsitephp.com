@@ -10,5 +10,25 @@
             <button>Return</button>
         </a>
 
+        <h3>My products</h3>
+
+        <button onclick="window.location.reload(true);">Refresh</button>
+
+
+        <form action="/php/find.php" method="post">
+            <input input type="text" name="Pname">
+            <button type="submit">Search</button>
+        </form>
+
+        
+        
+        <ul>
+            <?php 
+                session_start();
+                include 'php/product.php';
+                show_product(1);
+            ?>
+        </ul>
+
     </body>
 </html>
