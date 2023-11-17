@@ -36,7 +36,8 @@
         echo "<button id='likeButton' name='liked'>like</button>";
     }
 
-    echo "<div id='demo'>demo</div>";
+    //can use javascript to return the value for testing//
+    // echo "<div id='demo'>demo</div>";
 
 
     $sql = "SELECT * FROM `product` WHERE id = $itemID;";
