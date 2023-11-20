@@ -8,8 +8,6 @@ document.getElementById('likeButton').addEventListener('click', function() {
             "like" : document.getElementById('likeButton').innerHTML = "not";
     }
 
-    
-
     // use AJAX to send the state to PHP
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", "/php/handle_data.php", true);

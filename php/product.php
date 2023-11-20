@@ -53,13 +53,24 @@
                 $Pimage = $obj->Pimage;
                 $Pdescription = $obj->Pdescription;
                 $Pid = $obj->id;
-                echo "<li>
-                        <a href=/html/item.html/$Pid>
-                        <p>$Pname</p>
-                        <img src='$Pimage' alt='error' width='150' height='120'>
-                        <h4>$Pdescription</h4>
-                        </a>
-                    </li>";
+                if ($sellerornot == 0){
+                    echo "<li>
+                            <a href=/html/item.html/$Pid>
+                            <p>$Pname</p>
+                            <img src='$Pimage' alt='error' width='150' height='120'>
+                            <h4>$Pdescription</h4>
+                            </a>
+                        </li>";
+                }elseif ($sellerornot == 1){
+                    echo "<li>
+                            <a href=/html/item_seller.html/$Pid>
+                            <p>$Pname</p>
+                            <img src='$Pimage' alt='error' width='150' height='120'>
+                            <h4>$Pdescription</h4>
+                            </a>
+                        </li>";    
+
+                }
 
             }
         }   
