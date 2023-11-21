@@ -6,9 +6,9 @@ function deleteProduct(){
 
     // use AJAX to send the productName for deleting to corresponding PHP
     var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "/php/delete_upload.php", true);
+    xhttp.open("POST", "/php/data_manage.php", true);
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhttp.send("productNo="+itemNo);
+    xhttp.send("action=delete&productNo="+itemNo);
     
     //########## onreadystatechange is when response received,
     //########## usually test if the data sccessful send to the server ########
