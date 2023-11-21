@@ -13,8 +13,15 @@
 
         <?php include 'php/item.php' ?>
 
+        <form action="" method="GET">
+            Enter your new information about the Product: <br>
+            New Product Name: <input type="text" name="name" value=""><br>
+            New Product Description: <input type="text" name="description" value=""><br>
+            <input type="button" name="button" value="submit" onClick="updateProduct(this.form)">
+        </form>
+
 
     </body>
     <script src="/like_button.js"></script>
-    <script src="/delete_file.js"></script>
+    <script src="/data_change.js"></script>
 </html>
