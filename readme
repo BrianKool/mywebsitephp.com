@@ -1,5 +1,10 @@
 The purpose i create this repository is because i want to learn php and willing to get to know php much more 
 
+Develope Environment:
+XAMPP - (Front-End)HTML, javascript, css & (Back-End)PHP &(Database) MariaDB by using mysql for management
+
+
+
 The main features i have put in the project includes:
 1. user log-in sign-up system
 2. product upload/delete/update (only for seller) 
